@@ -1,0 +1,53 @@
+.base-heading-h1 {
+  font-family: $base-font-family;
+  font-size: 48px;
+  font-weight: $base-font-weight-bold;
+  color: $base-heading-colour;
+  margin-top: 0;
+  margin-bottom:30px;
+  display: block;
+}
+
+.base-heading-h2 {
+  font-family: $base-font-family;
+  font-size: 36px;
+  font-weight: $base-font-weight-bold;
+  color: $base-heading-colour;
+  margin-top: 0;
+  margin-bottom:30px;
+  display: block;
+}
+
+.base-heading-h3 {
+  font-family: $base-font-family;
+  font-size: 24px;
+  font-weight: $base-font-weight-bold;
+  color: $base-heading-colour;
+  margin-top: 0;
+  margin-bottom:20px;
+  display: block;
+}
+
+.base-heading-h4 {
+  font-family: $base-font-family;
+  font-size: 19px;
+  font-weight: $base-font-weight-bold;
+  color: $base-heading-colour;
+  margin-top: 0;
+  margin-bottom:10px;
+  display: block;
+}
+
+.base-body {
+  font-family: $base-font-family;
+  font-size: 19px;
+  font-weight: $base-font-weight-regular;
+  color: $base-font-colour;
+  margin-top: 0;
+  margin-bottom:10px;
+  display: block;
+}
+
+.base-body-bold {
+  font-weight: $base-font-weight-bold;
+}

@@ -1,5 +1,8 @@
+$base-font-colour: map-get($base-colours, 'black');
+$base-heading-colour: map-get($base-colours, 'blue');
+
 .base-heading-h1 {
-  font-family: $base-font-family;
+  font-family: $base-heading-family;
   font-size: 48px;
   font-weight: $base-font-weight-bold;
   color: $base-heading-colour;
@@ -50,4 +53,8 @@
 
 .base-body-bold {
   font-weight: $base-font-weight-bold;
+}
+
+.base-body-l {
+  font-size: 20px;
 }

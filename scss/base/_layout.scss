@@ -1,0 +1,22 @@
+.base-width-container{
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  @include sm {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  @include md {
+    margin-left: 15px; 
+    margin-right: 15px;
+  }
+  @include lg {
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  @include xl {
+    margin-left: auto;
+    margin-right: auto;
+  }
+    
+}

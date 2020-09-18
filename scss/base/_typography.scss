@@ -1,5 +1,9 @@
 $base-font-colour: map-get($base-colours, 'black');
 $base-heading-colour: map-get($base-colours, 'blue');
+$base-link-colour: map-get($base-colours, 'yellow');
+$base-link-colour: map-get($base-colours, 'blue');
+$base-link-colour--hover: map-get($base-colours, 'dark-blue');
+$base-link-colour--visited: map-get($base-colours, 'purple');
 
 .base-heading-h1 {
   font-family: $base-heading-family;
@@ -9,7 +13,7 @@ $base-heading-colour: map-get($base-colours, 'blue');
   margin-top: 0;
   margin-bottom:30px;
   display: block;
-}
+} 
 
 .base-heading-h2 {
   font-family: $base-font-family;
@@ -57,4 +61,45 @@ $base-heading-colour: map-get($base-colours, 'blue');
 
 .base-body-l {
   font-size: 20px;
+}
+
+.base-list {
+  padding-left: 20px;
+  font-family: $base-font-family;
+  font-size: 19px;
+  font-weight: $base-font-weight-regular;
+  color: $base-font-colour;
+  display: block;
+  margin-bottom:20px;
+  li {
+    margin-bottom:5px; 
+  }
+}
+
+.base-list--number {
+  list-style-type: decimal;
+}
+
+.base-list--bullet {
+  list-style-type: disc; 
+}
+
+.base-link {
+  cursor: pointer;
+  text-decoration: underline; 
+  &:link {
+    color: $base-link-colour;
+  }
+  &:hover {
+    color: $base-link-colour--hover;
+  }
+  &:visited {
+    color: $base-link-colour--visited;
+  }
+  &:focus {
+    outline: 3px solid transparent;
+    color: $base-font-colour;
+    background-color: $base-focus-color;
+    box-shadow: 0 -2px $base-focus-color, 0 4px $base-font-colour;
+  }
 }

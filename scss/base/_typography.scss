@@ -1,65 +1,86 @@
 /* colours variables for text */
 $base-font-colour: map-get($base-colours, 'black');
-$base-heading-colour: map-get($base-colours, 'blue');
+$base-heading-colour: map-get($base-colours, 'black');
 $base-focus-colour: map-get($base-colours, 'yellow');
 $base-link-colour: map-get($base-colours, 'blue');
 $base-link-colour--hover: map-get($base-colours, 'dark-blue');
 $base-link-colour--visited: map-get($base-colours, 'purple');
 
 
+
 .base-heading-h1 {
   font-family: $base-heading-family;
-  font-size: map-get($base-font-sizes, 'h1');
+  font-size: map-get($base-font-sizes, 'h1-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-bold;
   color: $base-heading-colour;
   margin-top: 0;
-  margin-bottom:30px;
+  margin-bottom: map-get($base-spacing, '6'); 
   display: block;
+  @include sm {
+    font-size: map-get($base-font-sizes, 'h1');
+    margin-bottom: map-get($base-spacing, '8'); 
+  }
 } 
 
 .base-heading-h2 {
   font-family: $base-font-family;
-  font-size: map-get($base-font-sizes, 'h2');
+  font-size: map-get($base-font-sizes, 'h2-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-bold;
   color: $base-heading-colour;
   margin-top: 0;
-  margin-bottom:30px;
+  margin-bottom: map-get($base-spacing, '4');
   display: block;
+    @include sm {
+    font-size: map-get($base-font-sizes, 'h2');
+    margin-bottom: map-get($base-spacing, '6'); 
+  }
 }
 
 .base-heading-h3 {
   font-family: $base-font-family;
-  font-size: map-get($base-font-sizes, 'h3');
+  font-size: map-get($base-font-sizes, 'h3-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-bold;
   color: $base-heading-colour;
   margin-top: 0;
-  margin-bottom:20px;
+  margin-bottom: map-get($base-spacing, '4');
   display: block;
+    @include sm {
+    font-size: map-get($base-font-sizes, 'h3');
+    margin-bottom: map-get($base-spacing, '5'); 
+  }
 }
 
 .base-heading-h4 {
   font-family: $base-font-family;
-  font-size: map-get($base-font-sizes, 'h4');
+  font-size: map-get($base-font-sizes, 'h4-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-bold;
   color: $base-heading-colour;
   margin-top: 0;
-  margin-bottom:10px;
+  margin-bottom: map-get($base-spacing, '4'); 
   display: block;
+    @include sm {
+    font-size: map-get($base-font-sizes, 'h4');
+    margin-bottom: map-get($base-spacing, '5'); 
+  }
 }
 
 .base-body {
   font-family: $base-font-family;
-  font-size: map-get($base-font-sizes, 'text');
+  font-size: map-get($base-font-sizes, 'text-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-regular;
   color: $base-font-colour;
   margin-top: 0;
-  margin-bottom:10px;
+  margin-bottom: map-get($base-spacing, '4');
   display: block;
+    @include sm {
+    font-size: map-get($base-font-sizes, 'text');
+    margin-bottom: map-get($base-spacing, '5'); 
+  }
 }
 
 .base-body-bold {
@@ -67,22 +88,31 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
 }
 
 .base-body-l {
-  font-size: map-get($base-font-sizes, 'intro-text');
+  font-size: map-get($base-font-sizes, 'intro-text-sm');
   line-height: $base-line-height;
+  margin-bottom: map-get($base-spacing, '6');
+    @include sm {
+    font-size: map-get($base-font-sizes, 'intro-text');
+    margin-bottom: map-get($base-spacing, '7'); 
+  }
 }
 
 .base-list {
   
   padding-left: 20px;
   font-family: $base-font-family;
-  font-size: map-get($base-font-sizes, 'text');
+  font-size: map-get($base-font-sizes, 'text-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-regular;
   color: $base-font-colour;
   display: block;
-  margin-bottom:20px;
+  margin-bottom: map-get($base-spacing, '4');
+    @include sm {
+    font-size: map-get($base-font-sizes, 'text');
+    margin-bottom: map-get($base-spacing, '5'); 
+  }
   li {
-    margin-bottom:5px; 
+    margin-bottom: map-get($base-spacing, '1');
   }
 }
 
@@ -96,6 +126,7 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
 
 .base-link {
   cursor: pointer;
+  color: $base-link-colour;
   text-decoration: underline; 
   &:link {
     color: $base-link-colour;
@@ -114,3 +145,12 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
     text-decoration: none;
   }
 }
+
+/* colouring selector to colout type */
+.base-font--white {
+  color: map-get($base-colours, 'white');
+}
+
+.base-font--blue {
+  color: map-get($base-colours, 'blue');
+} 

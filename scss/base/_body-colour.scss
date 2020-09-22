@@ -1,0 +1,11 @@
+.base-bg--white {
+    background-color: map-get($base-colours, 'white');
+}
+
+.base-bg--black {
+    background-color: map-get($base-colours, 'black');
+}
+
+.base-bg--blue {
+    background-color: map-get($base-colours, 'blue');
+}

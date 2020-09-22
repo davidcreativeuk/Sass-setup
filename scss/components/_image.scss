@@ -1,0 +1,12 @@
+.base-image {
+   max-width: 720px;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0;
+   margin-bottom: map-get($base-spacing, '4');
+   display: block;
+    @include sm {
+      margin-bottom: map-get($base-spacing, '5'); 
+    }
+}

@@ -1,15 +1,11 @@
 // breakpoints
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
-
+//small viewports are the default size - mobile first
 // Small tablets (portrait view)
-$screen-md-min: 768px;
+$screen-sm-min: 641px;
 
-// Tablets and small desktops
-$screen-lg-min: 992px;
+// Tablets and desktops
+$screen-md-min: 769px;
 
-// Large tablets and desktops
-$screen-xl-min: 1200px;
 
 
 // Small devices
@@ -22,20 +18,6 @@ $screen-xl-min: 1200px;
 // Medium devices 
 @mixin md {
    @media (min-width: #{$screen-md-min}) {
-       @content;
-   }
-}
-
-// Large devices
-@mixin lg {
-   @media (min-width: #{$screen-lg-min}) {
-       @content;
-   }
-}
-
-// Extra large devices
-@mixin xl {
-   @media (min-width: #{$screen-xl-min}) {
        @content;
    }
 }

@@ -1,10 +1,16 @@
 // breakpoints
 //small viewports are the default size - mobile first
-// Small tablets (portrait view)
-$screen-sm-min: 641px;
+// mobile
+$screen-sm-min: 320px;
 
-// Tablets and desktops
-$screen-md-min: 769px;
+// Tablets
+$screen-md-min: 641px;
+
+// desktops
+$screen-lg-min: 769px;
+
+// large desktops
+$screen-xl-min: 1080px;
 
 
 
@@ -21,3 +27,17 @@ $screen-md-min: 769px;
        @content;
    }
 }
+
+// large devices 
+@mixin lg {
+   @media (min-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+
+// extra large devices 
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }

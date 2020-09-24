@@ -1,21 +1,12 @@
 .base-block {
+    background-color: map-get($base-colours, 'black');
     border-top:1px solid transparent;
     border-bottom:1px solid transparent;
     padding-top: map-get($base-spacing, '4'); 
     margin-bottom: map-get($base-spacing, '4'); 
     display: block;
-    @include sm {
+    @include md {
       padding-top: map-get($base-spacing, '5'); 
       margin-bottom: map-get($base-spacing, '5');
     }
-}
-
-.base-block--black {
-    background-color: map-get($base-colours, 'black');
-}
-.base-block--blue {
-    background-color: map-get($base-colours, 'blue'); 
-}
-.base-block--yellow {
-    background-color: map-get($base-colours, 'yellow');
 }

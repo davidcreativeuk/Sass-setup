@@ -1,24 +1,7 @@
 /* colouring selector to colout type */
-.base-font--white {
-  color: map-get($base-colours, 'white') !important;
+
+@each $name, $value in $base-colours {
+  .base-font--#{$name} {
+    color: $value !important;
+  }   
 }
-  
-.base-font--blue {
-  color: map-get($base-colours, 'blue') !important;
-} 
-  
-.base-font--dark-blue {
-  color: map-get($base-colours, 'dark-blue') !important;
-} 
-    
-.base-font--purple {
-  color: map-get($base-colours, 'purple') !important;
-} 
-    
-.base-font--yellow {
-  color: map-get($base-colours, 'yellow') !important;
-} 
-    
-.base-font--black {
-  color: map-get($base-colours, 'black') !important;
-} 

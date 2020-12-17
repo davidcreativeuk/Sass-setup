@@ -1,0 +1,140 @@
+.base-navbutton {
+    align-self: center;
+    border:0;
+    color: inherit;
+    /* default hide the button */
+    display:none;
+    cursor: pointer;
+    font-family: $base-font-family;
+    font-size: map-get($base-font-sizes, 'text-sm');
+    line-height: $base-line-height;
+    font-weight: $base-font-weight-regular;
+    padding: 1.2rem 0;
+    &[aria-expanded="false"]::after{
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent;
+      -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+      clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+      border-width: 1rem .8rem 0 .8rem;
+      content: " ";
+      margin-left: 5px;
+      border-top-color: currentColor;
+    }
+    &[aria-expanded="true"]::after{
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent;
+      -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+      clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+      border-width: 0 .8rem 1rem .8rem;
+      content: " ";
+      margin-left: 5px;
+      border-bottom-color: currentColor;
+    }
+    @include md {
+      font-size: map-get($base-font-sizes, 'text');
+      display: none;
+    }
+}
+
+
+.base-navbar {
+  border-bottom:1px solid  map-get($base-colours, 'black');
+    position: relative;
+    margin-left:0;
+  margin-right:0;
+max-width: 1020px;
+
+@include md {
+  margin-left: 30px;
+  margin-right: 30px;
+}  
+@include lg {
+  margin-left: 30px;
+  margin-right: 30px;
+}  
+@include xl {
+  margin-left: auto; 
+  margin-right: auto;
+}  
+
+}
+
+.base-navbar--open {
+  display:block !important;
+}
+
+.base-navitem {
+    margin:0;
+    display:block;
+    border-bottom: 1px solid map-get($base-colours, 'gray');
+    padding: 0rem 1.5rem;
+    &:last-child {
+        border-bottom: 0;
+    }
+    @include md {
+        display: inline-block;
+        padding:0;
+        border-bottom: none;
+      }  
+}
+
+
+
+.base-navlink {
+    cursor: pointer;
+    font-family: $base-font-family;
+    font-size: map-get($base-font-sizes, 'text-sm');
+    line-height: $base-line-height;
+    font-weight: $base-font-weight-regular;
+    color: inherit;
+    text-decoration: none; 
+    padding:1.5rem .5rem;
+    display:block;
+    background-color: map-get($base-colours, 'white');
+    margin:0 ;
+      @include md {
+        /* display: inline-block; */
+        padding:1.9rem 1.2rem;
+      font-size: map-get($base-font-sizes, 'text');
+      margin:0 3px 0 0;
+    }
+    &:link {
+      color: inherit;
+    }
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      color: inherit;
+        text-decoration: underline;
+      }
+    &:focus {
+      outline: 3px solid map-get($base-colours, 'yellow');;
+      color: inherit;
+/*       background-color: map-get($base-colours, 'yellow');
+      box-shadow: inset 0 -3px  map-get($base-colours, 'black'); 
+      text-decoration: underline; */
+    }
+    &[aria-current=page] {
+      color: inherit;
+      border-bottom: .5rem solid map-get($base-colours, 'blue');
+      padding-bottom: 1rem;
+      /* text-decoration: none; */
+      font-weight: $base-font-weight-bold;
+      @include md {
+        border-bottom-width: .7rem;
+        padding-bottom:1.2rem;
+    }
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+    
+    }
+  }

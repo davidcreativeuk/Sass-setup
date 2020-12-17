@@ -15,16 +15,16 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
   font-weight: $base-font-weight-bold;
   color: $base-heading-colour;
   margin-top: 0;
-  margin-bottom: map-get($base-spacing, '6'); 
+  margin-bottom: map-get($base-spacing, '4'); 
   display: block;
   @include md {
     font-size: map-get($base-font-sizes, 'h1');
-    margin-bottom: map-get($base-spacing, '8'); 
+    margin-bottom: map-get($base-spacing, '5'); 
   }
 } 
 
 .base-heading-h2 {
-  font-family: $base-font-family;
+  font-family: $base-heading-family;
   font-size: map-get($base-font-sizes, 'h2-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-bold;
@@ -34,12 +34,23 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
   display: block;
     @include md {
     font-size: map-get($base-font-sizes, 'h2');
-    margin-bottom: map-get($base-spacing, '6'); 
+    margin-bottom: map-get($base-spacing, '5'); 
+  }
+}
+
+.base-body + .base-heading-h2, .base-list + .base-heading-h2 {
+  padding-top: map-get($base-spacing, '2');
+}
+
+.base-body-l + .base-heading-h2 {
+  padding-top: map-get($base-spacing, '0');
+  @include md {
+  padding-top: map-get($base-spacing, '1');
   }
 }
 
 .base-heading-h3 {
-  font-family: $base-font-family;
+  font-family: $base-heading-family;
   font-size: map-get($base-font-sizes, 'h3-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-bold;
@@ -49,12 +60,16 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
   display: block;
     @include md {
     font-size: map-get($base-font-sizes, 'h3');
-    margin-bottom: map-get($base-spacing, '5'); 
+    margin-bottom: map-get($base-spacing, '4'); 
   }
 }
 
+.base-body + .base-heading-h3 , .base-list + .base-heading-h3 {
+  padding-top: map-get($base-spacing, '2');
+}
+
 .base-heading-h4 {
-  font-family: $base-font-family;
+  font-family: $base-heading-family;
   font-size: map-get($base-font-sizes, 'h4-sm');
   line-height: $base-line-height;
   font-weight: $base-font-weight-bold;
@@ -64,7 +79,14 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
   display: block;
     @include md {
     font-size: map-get($base-font-sizes, 'h4');
-    margin-bottom: map-get($base-spacing, '5'); 
+    margin-bottom: map-get($base-spacing, '4'); 
+  }
+}
+
+.base-body + .base-heading-h4, .base-list + .base-heading-h4 {
+  padding-top: map-get($base-spacing, '2');
+  @include md {
+    padding-top: map-get($base-spacing, '0');
   }
 }
 
@@ -138,10 +160,10 @@ $base-link-colour--visited: map-get($base-colours, 'purple');
     color: $base-link-colour--visited;
   }
   &:focus {
-    outline: 3px solid transparent;
-    color: $base-font-colour;
+    outline: 3px solid $base-focus-colour;
+/*     color: $base-font-colour;
     background-color: $base-focus-colour;
     box-shadow: 0 -2px $base-focus-colour, 0 4px $base-font-colour; 
-    text-decoration: none;
+    text-decoration: none; */
   }
 }

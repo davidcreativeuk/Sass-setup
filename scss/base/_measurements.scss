@@ -18,6 +18,7 @@ $base-font-sizes: (
   'h4': 2.1rem,
   'intro-text': 2.4rem,
   'text': 1.9rem,
+  'small-text': 1.6rem,
   'header-logo-sm': 2.1rem,
   'h1-sm': 3.6rem,
   'h2-sm': 3.0rem,
@@ -25,6 +26,7 @@ $base-font-sizes: (
   'h4-sm': 2.0rem,
   'intro-text-sm': 2.2rem,
   'text-sm': 1.6rem,
+  'small-text-sm': 1.4rem,
 );
 
 $base-spacing: (
@@ -42,3 +44,14 @@ $base-spacing: (
   '11': 6.0rem,
   '12': 7.0rem,
 );
+
+$base-grid-widths: (
+  one-sixth: 16.6666%,
+  one-quarter: 25%,
+  one-third: 33.3333%,
+  one-half: 50%,
+  two-sixths: 33.3333%,
+  two-thirds: 66.6666%,
+  three-quarters: 75%,
+  full: 100%
+)

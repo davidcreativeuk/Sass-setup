@@ -1,0 +1,22 @@
+.base-grid-row{
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.base-grid-row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@each $name, $value in $base-grid-widths {
+  .base-grid-column--#{$name} {
+    width:100%;
+    padding: 0 12px;
+    @include md {
+      float:left;  
+      width: $value;
+    }
+  }   
+}
+

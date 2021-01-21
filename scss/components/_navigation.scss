@@ -1,6 +1,6 @@
 .base-navbutton {
     align-self: center;
-    border:0;
+    /* border:0; */
     color: inherit;
     /* default hide the button */
     display:none;
@@ -10,6 +10,9 @@
     line-height: $base-line-height;
     font-weight: $base-font-weight-regular;
     padding: 1.2rem 0;
+    &:focus {
+      @include focus-style;
+    }
     &[aria-expanded="false"]::after{
       display: inline-block;
       width: 0;
@@ -94,15 +97,14 @@ max-width: 1020px;
     font-weight: $base-font-weight-regular;
     color: inherit;
     text-decoration: none; 
-    padding:1.5rem .5rem;
+    padding:1.1rem .1rem;
     display:block;
     background-color: map-get($base-colours, 'white');
-    margin:0 ;
+    margin:.3rem 0;
       @include md {
-        /* display: inline-block; */
-        padding:1.9rem 1.2rem;
-      font-size: map-get($base-font-sizes, 'text');
-      margin:0 3px 0 0;
+        padding:1.5rem .8rem;
+        font-size: map-get($base-font-sizes, 'text');
+        margin-right: .3rem;
     }
     &:link {
       color: inherit;
@@ -115,21 +117,17 @@ max-width: 1020px;
         text-decoration: underline;
       }
     &:focus {
-      outline: 3px solid map-get($base-colours, 'yellow');;
-      color: inherit;
-/*       background-color: map-get($base-colours, 'yellow');
-      box-shadow: inset 0 -3px  map-get($base-colours, 'black'); 
-      text-decoration: underline; */
+      @include focus-style;
     }
     &[aria-current=page] {
       color: inherit;
-      border-bottom: .5rem solid map-get($base-colours, 'blue');
-      padding-bottom: 1rem;
-      /* text-decoration: none; */
+      border-bottom: .4rem solid map-get($base-colours, 'black');
+      padding-bottom: .7rem;
       font-weight: $base-font-weight-bold;
+      box-shadow: 0 .3rem 0 0 map-get($base-colours, 'black');
       @include md {
-        border-bottom-width: .7rem;
-        padding-bottom:1.2rem;
+        border-bottom-width: .4rem;
+        padding-bottom:1.1rem;
     }
     &:hover {
       color: inherit;

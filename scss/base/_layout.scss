@@ -1,15 +1,15 @@
 .base-width-container{
   max-width: 1016px;
   position: relative;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
   @include md {
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
   }  
   @include lg {
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
   }  
   @include xl {
     margin-left: auto; 

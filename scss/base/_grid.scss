@@ -1,6 +1,6 @@
 .base-grid-row{
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: -1.2rem;
+  margin-right: -1.2rem;
 }
 
 .base-grid-row::after {
@@ -12,7 +12,7 @@
 @each $name, $value in $base-grid-widths {
   .base-grid-column--#{$name} {
     width:100%;
-    padding: 0 12px;
+    padding: 0 1.2rem;
     @include md {
       float:left;  
       width: $value;

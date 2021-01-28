@@ -1,13 +1,5 @@
 
-/* set font size of doc so we can use rems */
-html {
-  font-size: 10px; 
-    @include md {
-      font-size: 10px; 
-    } 
-}
-
-/* font size variables */
+// font size variables
 $base-line-height: 1.32;
 
 $base-font-sizes: (

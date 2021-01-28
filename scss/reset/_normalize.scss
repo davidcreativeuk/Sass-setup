@@ -10,7 +10,11 @@
 
  html {
     line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* 2 */
   }
   
   /* Sections
@@ -196,7 +200,9 @@
   [type="button"],
   [type="reset"],
   [type="submit"] {
+    -moz-appearance: button;
     -webkit-appearance: button;
+    appearance: button;
   }
   
   /**
@@ -306,7 +312,9 @@
    */
   
   ::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    appearance: button; /* 1 */
     font: inherit; /* 2 */
   }
   

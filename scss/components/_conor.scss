@@ -48,11 +48,6 @@
       position: absolute;
       z-index: -1;
       background-color: map-get($base-colours, 'pink');
-      background-image: url(../assets/conor-scribble.svg);
-      background-repeat:no-repeat;
-      background-position: top left;
-      background-size: contain;
-      background-origin: content-box;
       transform: rotate(-2deg);
       transform-origin: top left;
       width:100%;

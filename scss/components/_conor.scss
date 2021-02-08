@@ -12,6 +12,27 @@
     padding: map-get($base-spacing, '9') 0 map-get($base-spacing, '5') 0; 
   }
 }
+.conor-social-link {
+  display:inline-block;
+  cursor: pointer;
+  text-decoration: none; 
+  background-color: map-get($base-colours, 'black');
+  color: map-get($base-colours, 'white');
+  padding:.8rem;
+  margin:0 .8rem 1.2rem 0;
+  &:link {
+    color: map-get($base-colours, 'white');
+  }
+  &:visited {
+    color: map-get($base-colours, 'white');
+  }
+  &:hover {
+    color: map-get($base-colours , 'cyan' );
+    }
+  &:focus {
+    @include focus-style;
+  }
+}
 
 .conor-nav-container {
     position:relative;

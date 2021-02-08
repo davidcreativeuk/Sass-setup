@@ -27,7 +27,7 @@
     color: map-get($base-colours, 'white');
   }
   &:hover {
-    color: map-get($base-colours , 'cyan' );
+    color: map-get($base-colours , 'green' );
     }
   &:focus {
     @include focus-style;
